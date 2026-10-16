@@ -12,7 +12,9 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $todo_list = Todo::with('tags')->get();
+        $todo_list = Todo::with('tags')
+            ->with('likedBy')
+            ->get();
 
         // "Dump and Die" prints the data and stops executing. Useful
         // for debugging and looking at intermediate values.

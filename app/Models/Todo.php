@@ -14,4 +14,11 @@ class Todo extends Model
         return $this->belongsToMany(Tag::class);
     }
 
+    public function likedBy(): BelongsToMany
+    {
+        // Second parameter is the name of the pivot table since
+        // it is not the standard convention of todo_user
+        return $this->belongsToMany(User::class, 'likes');
+    }
+
 }
