@@ -112,8 +112,19 @@ TodoSeeder.php file where each todo item is created individually.
 If you were given data in a .csv file of JSON file, you could parse the file and programatically build each insert 
 statement similar in concept to the TagSeeder.php file
 
+## Using Eloquent
+Eloquent is an object relational mapper (ORM). It is a means of interacting with the database through objects and 
+not raw SQL. It provides a programmer friendly mechanism to retrieve and commit data to a data store. With 
+proper implementation of the backend models, the controller code has no idea of where the data is being stored on 
+in what format it is being stored.
 
+Naming conventions are important.  You want to create a todo controller like this:
 
+```bash
+php artisan make:controller -r TodoController
+```
+where -r makes a resource controller (stub methods for all CRUD operations) and The "noun" for the controller 
+is capitalized and singluar and followed by "Controller.php"
 
 
 
