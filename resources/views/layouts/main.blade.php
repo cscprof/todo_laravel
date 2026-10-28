@@ -34,10 +34,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link active" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tasks</a>
+                    <a class="nav-link" href="{{ route('todos.index') }}">Todos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('todos.create') }}">New Todo</a>
                 </li>
             </ul>
         </div>
